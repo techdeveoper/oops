@@ -77,3 +77,81 @@ The derived class is the specialized class for the base class.
     3. Hierarchical
     4. Hybrid :- single, multiple, Hierarchical etc....
     5. Multiple
+
+3.  Encapsulation:-
+    Encapsulation is an OOP concept where data and methods are wrapped together inside a class, and direct access to data is restricted.
+    is the process of binding data and methods together in a single unit and restricting the direct access to the data.
+    In java, we achieve encapsulation by declaring variable as private and providing public getter and setter methods to access and modify them.
+
+                class Student {
+                private String name;
+                private int age;
+
+                    public String getName() {
+                        return name;
+                    }
+
+                    public void setName(String name) {
+                        this.name = name;
+                    }
+
+                    public int getAge() {
+                        return age;
+                    }
+
+                    public void setAge(int age) {
+                        if (age > 0) {
+                            this.age = age;
+                        }
+                    }
+
+                }
+
+                public class Main {
+                public static void main(String[] args) {
+                    Student s = new Student();
+
+                    s.setName("Rahul");
+                    s.setAge(22);
+
+                    System.out.println(s.getName());
+                    System.out.println(s.getAge());
+                }
+
+            }
+
+        Protect data from direct access.
+        Improve security by using private variables.
+        Control data changes through setters.
+        Make code easier to maintain
+
+        <!--  -->
+
+    4. Abstraction:-
+       Abstraction is an OOP concept where we show only the important details to the user and hide the internal implementation.
+
+Abstraction is the process of hiding implementation details and showing only essential features to the user. In Java, abstraction is achieved using abstract classes and interfaces.
+
+what an object does is shown, but how it does it is hidden.
+
+Real-life example
+When you drive a car, you use the steering, brake, and accelerator. You do not need to know exactly how the engine works internally. That is abstraction.
+
+        ![alt text](image.png)
+
+    Abstract Class
+    An abstract class is a class that cannot be directly instantiated. It can have both:
+        Abstract methods
+        Concrete methods
+        Variables
+        Constructors
+
+    Interface
+    An interface is a blueprint of a class. It is mainly used to achieve abstraction and multiple inheritance in Java.
+    An interface can contain:
+        Abstract methods
+        Default methods
+        Static methods
+        Constants
+
+An abstract class is used when we want to provide both common implementation and abstraction. An interface is used when we want to define a contract that multiple classes can follow. A class can extend only one abstract class, but it can implement multiple interfaces.
